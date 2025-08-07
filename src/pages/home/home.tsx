@@ -18,7 +18,7 @@ const Home = () => {
                         I’m Danial Sharifi, born in 1999 , Designer and Product Manager live in <span>Tehran</span>
                         <b>Barcelona</b>
                     </p>
-                    <a href=''>Watch CV</a>
+                    <Link to=''>Watch CV</Link>
                 </div>
             </header>
             <div className='header-img'>
@@ -33,7 +33,7 @@ const Home = () => {
             </div>
             <div className='cv-project'>
                 <div className='project-list'>
-                    <Link to='/BRAINFROG' className='item '>
+                    <Link to='/project/BRAINFROG' className='item '>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
@@ -44,7 +44,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/RAKIZ-STUDIO' className='item '>
+                    <Link to='/project/RAKIZ-STUDIO' className='item '>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
@@ -55,7 +55,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/JRI' className='item '>
+                    <Link to='/project/JRI' className='item '>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title '>
@@ -66,7 +66,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/TDEX' className='item '>
+                    <Link to='/project/TDEX' className='item '>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
@@ -77,7 +77,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/A-EYES' className='item'>
+                    <Link to='/project/A-EYES' className='item'>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
@@ -88,7 +88,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/QUBY' className='item'>
+                    <Link to='/project/QUBY' className='item'>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
@@ -99,7 +99,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/FIRE-DRILL' className='item '>
+                    <Link to='/project/FIRE-DRILL' className='item '>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
@@ -110,7 +110,7 @@ const Home = () => {
                             </div>
                         </div>
                     </Link>
-                    <Link to='/DATIS-INTERNATIONAL' className='item '>
+                    <Link to='/project/DATIS-INTERNATIONAL' className='item '>
                         <div className='row-line'>
                             <div className='row-line2'>
                                 <p className='title'>
