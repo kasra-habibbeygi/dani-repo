@@ -22,7 +22,7 @@ const Home = () => {
                 </div>
             </header>
             <div className='header-img'>
-                <img src={matches ? '/Res Landing Image.png' : '/portfo5-min.webp'} alt='' />
+                <img src={matches ? '/img/Res Landing Image.png' : '/img/portfo5-min.webp'} alt='' />
                 <div className='label'>
                     <span>Projects</span>
                     <button>
@@ -40,7 +40,7 @@ const Home = () => {
                                     <span>BRAINFROG</span>
                                     <small>Application</small>
                                 </p>
-                                <img src='/portfo1-min.webp' alt='project logo' />
+                                <img src='/img/portfo1-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -51,7 +51,7 @@ const Home = () => {
                                     <span>RAKIZ STUDIO</span>
                                     <small>Branding, Website</small>
                                 </p>
-                                <img src='/portfo2-min.webp' alt='project logo' />
+                                <img src='/img/portfo2-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -62,7 +62,7 @@ const Home = () => {
                                     <span>JRI</span>
                                     <small>Website</small>
                                 </p>
-                                <img src='/portfo1-min.webp' alt='project logo' />
+                                <img src='/img/portfo1-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -73,7 +73,7 @@ const Home = () => {
                                     <span>TDEX</span>
                                     <small>Application, Website</small>
                                 </p>
-                                <img src='/portfo4-min.webp' alt='project logo' />
+                                <img src='/img/portfo4-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -84,7 +84,7 @@ const Home = () => {
                                     <span>A-EYES</span>
                                     <small>Application</small>
                                 </p>
-                                <img src='/portfo6-min.webp' alt='project logo' />
+                                <img src='/img/portfo6-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -95,7 +95,7 @@ const Home = () => {
                                     <span>QUBY</span>
                                     <small>Application, Branding</small>
                                 </p>
-                                <img src='/portfo3-min.webp' alt='project logo' />
+                                <img src='/img/portfo3-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -106,7 +106,7 @@ const Home = () => {
                                     <span>FIRE DRILL</span>
                                     <small>Application</small>
                                 </p>
-                                <img src='/portfo4-min.webp' alt='project logo' />
+                                <img src='/img/portfo4-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
@@ -117,7 +117,7 @@ const Home = () => {
                                     <span>DATIS INTERNATIONAL</span>
                                     <small>Website</small>
                                 </p>
-                                <img src='/portfo7-min.webp' alt='project logo' />
+                                <img src='/img/portfo7-min.webp' alt='project logo' />
                             </div>
                         </div>
                     </Link>
