@@ -13,7 +13,7 @@ export const ProjectContainer = styled.section(
         button {
             transform: rotate(90deg);
             padding: 12px;
-            width: 42px;
+            width: 40px;
             height: 40px;
             background: #ed6560;
             position: absolute;
@@ -32,7 +32,7 @@ export const ProjectContainer = styled.section(
             height: 440px;
             border-left: 1px solid #363636;
             border-right: 1px solid #363636;
-            margin: 0px 80px;
+            margin: 0px 81px;
             padding-bottom: 72px;
             display: flex;
             align-items: flex-end;
@@ -55,7 +55,6 @@ export const ProjectContainer = styled.section(
 
             .show-img {
                 width: 100%;
-                height: 800px;
                 object-fit: contain;
                 padding: 40px;
             }
@@ -81,7 +80,6 @@ export const ProjectContainer = styled.section(
                 border: 2px solid #ffffff;
                 color: #fff;
                 border-radius: 50px;
-                margin-top: 32px;
                 gap: 8px;
                 margin: 0px 20px 56px;
 
@@ -164,7 +162,6 @@ export const ProjectContainer = styled.section(
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 14px;
 
                         img {
                             width: 100%;
@@ -187,6 +184,7 @@ export const ProjectContainer = styled.section(
                         height: 133px;
                         background-color: #0a0a0a;
                         display: flex;
+
                         justify-content: center;
                         align-items: center;
                         padding: 34px;
@@ -197,6 +195,156 @@ export const ProjectContainer = styled.section(
                             object-fit: contain;
                         }
                     }
+                }
+            }
+        }
+
+        @media (max-width: 1300px) {
+            .project-info {
+                .item {
+                    .info-img-list {
+                        li {
+                            width: 110px;
+                            height: 110px;
+                            padding: 26px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .footer {
+                margin: 0px;
+                border: none;
+                height: 220px;
+            }
+
+            header {
+                height: 64px;
+                padding: 21px 80px;
+            }
+
+            .border-line {
+                padding: 0px 40px;
+            }
+
+            .project-info {
+                .label,
+                .info {
+                    display: none;
+                }
+
+                .item {
+                    grid-template-columns: repeat(2, 1fr);
+                    .info-img-list {
+                        li {
+                            width: 110px;
+                            height: 110px;
+                            padding: 26px;
+                        }
+                    }
+
+                    .img-list {
+                        margin: 0px 20px 40px;
+                    }
+                }
+            }
+
+            .right-box {
+                .label {
+                    display: block;
+                    margin-bottom: 12px;
+                }
+
+                .img-container {
+                    padding: 0px;
+                }
+
+                .show-img {
+                    padding: 0px 0px 40px;
+                }
+            }
+
+            .left-box {
+                .describe {
+                    padding: 56px 20px 40px;
+                }
+
+                a {
+                    width: calc(100% - 40px);
+                    margin: 0px 20px 40px;
+                }
+            }
+        }
+
+        @media (max-width: 998px) {
+            .border-line {
+                padding: 0px 20px;
+                border: none;
+                border-top: 1px solid #363636;
+            }
+
+            header {
+                height: 52px;
+                padding: 14px 20px;
+            }
+
+            .project-info {
+                .header {
+                    padding-left: 40px;
+                    justify-content: flex-end;
+
+                    small {
+                        display: none;
+                    }
+                }
+
+                .item {
+                    grid-template-columns: repeat(1, 1fr);
+                    padding: 0;
+                    border: none;
+
+                    .info-img-list {
+                        margin: 40px 0px 0px;
+                    }
+
+                    .choose-img {
+                        .img-list {
+                            margin: 0 0 40px;
+                        }
+
+                        .label {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+
+            .right-box {
+                order: 1;
+                border: none;
+
+                .img-container {
+                    padding: 0px;
+                }
+            }
+
+            .left-box {
+                order: 2;
+                border: none;
+
+                a {
+                    margin: 0;
+                    width: 100%;
+                }
+
+                .header {
+                    display: none;
+                }
+
+                .describe {
+                    padding: 0px 0px 40px;
                 }
             }
         }

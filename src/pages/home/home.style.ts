@@ -316,6 +316,7 @@ export const HomeContainer = styled.section(
 
             .cv-project {
                 .footer {
+                    height: 220px;
                     margin: 0px;
                     border: none;
                 }

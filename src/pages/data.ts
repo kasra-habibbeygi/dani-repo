@@ -48,7 +48,7 @@ export const data: ProjectItem[] = [
         cover: '/img/RAKIZ/rakiz.cover.png',
         details: {
             info: 'Branding, Event Planing, UI/UX Design',
-            img: ['img/RAKIZ/RAKIZ-STUDIO-info1.png', '/img/RAKIZ/RAKIZ-STUDIO-info2.png', '/img/RAKIZ/RAKIZ-STUDIO-info3.png']
+            img: ['/img/RAKIZ/RAKIZ-STUDIO-info1.png', '/img/RAKIZ/RAKIZ-STUDIO-info2.png', '/img/RAKIZ/RAKIZ-STUDIO-info3.png']
         },
         pictures: [
             '/img/RAKIZ/RAKIZ-STUDIO-pic1.png',

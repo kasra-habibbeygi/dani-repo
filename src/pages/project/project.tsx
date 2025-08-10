@@ -1,17 +1,30 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC, useState } from 'react';
 import { ProjectContainer } from './project.style';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { ProjectItem } from '../data';
 import { Arrow } from '@/assets/icons';
+import { useMediaQuery } from '@mui/material';
 
 interface ProjectProps {
     data: ProjectItem[];
 }
 
 const Project: FC<ProjectProps> = ({ data }) => {
+    const matches = useMediaQuery('(max-width:1200px)');
     const { name } = useParams<{ name: ProjectItem['name'] }>();
+    const navigate = useNavigate();
+
     const project = data.find(item => item.name === name);
     const [selectedImage, setSelectedImage] = useState<string | null>(project?.pictures?.[0] || null);
+
+    const handleBack = () => {
+        if ((window.history.state as any)?.idx > 0) {
+            navigate(-1);
+        } else {
+            navigate('/');
+        }
+    };
 
     if (!project) {
         return (
@@ -25,7 +38,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
             <header>Danial Sharifi</header>
             <div className='border-line'>
                 <div className='project-info'>
-                    <button>
+                    <button className='back' type='button' onClick={handleBack} aria-label='Go back'>
                         <Arrow />
                     </button>
                     <div className='item'>
@@ -44,25 +57,43 @@ const Project: FC<ProjectProps> = ({ data }) => {
                                     </li>
                                 ))}
                             </ul>
-                            <p className='label'>Pictures</p>
-                            <ul className='img-list'>
-                                {project?.pictures.map(url => (
-                                    <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
-                                        <img src={url} alt='Picture' />
-                                    </li>
-                                ))}
-                            </ul>
+                            {!matches && (
+                                <>
+                                    <p className='label'>Pictures</p>
+                                    <ul className='img-list'>
+                                        {project?.pictures.map(url => (
+                                            <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
+                                                <img src={url} alt='Picture' />
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </>
+                            )}
                         </div>
                         <div className='right-box'>
                             <p className='header'>
                                 <span>{project?.name}</span>
                                 <small>{project?.type}</small>
                             </p>
-                            <div className='img-container'>
-                                {selectedImage ? (
-                                    <img className='show-img' src={selectedImage} alt='Selected' />
-                                ) : (
-                                    <div className='show-img-placeholder'>Select an image</div>
+                            <div className='main-content'>
+                                <div className='img-container'>
+                                    {selectedImage ? (
+                                        <img className='show-img' src={selectedImage} alt='Selected' />
+                                    ) : (
+                                        <div className='show-img-placeholder'>Select an image</div>
+                                    )}
+                                </div>
+                                {matches && (
+                                    <div className='choose-img'>
+                                        <p className='label'>Pictures</p>
+                                        <ul className='img-list'>
+                                            {project?.pictures.map(url => (
+                                                <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
+                                                    <img src={url} alt='Picture' />
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
                                 )}
                             </div>
                         </div>
