@@ -1,9 +1,17 @@
-import { Arrow } from '@/assets/icons';
-import { HomeContainer } from './home.style';
+import { FC } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link } from 'react-router-dom';
+import { ProjectItem } from '../data';
 
-const Home = () => {
+// Assets
+import { Arrow } from '@/assets/icons';
+import { HomeContainer } from './home.style';
+
+//Types
+interface HomeProps {
+    data: ProjectItem[];
+}
+const Home: FC<HomeProps> = ({ data }) => {
     const matches = useMediaQuery('(max-width:600px)');
 
     return (
@@ -33,94 +41,19 @@ const Home = () => {
             </div>
             <div className='cv-project'>
                 <div className='project-list'>
-                    <Link to='/project/BRAINFROG' className='item '>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>BRAINFROG</span>
-                                    <small>Application</small>
-                                </p>
-                                <img src='/img/portfo1-min.webp' alt='project logo' />
+                    {data.map(item => (
+                        <Link to={`/project/${item.name}`} className='item ' key={item.id}>
+                            <div className='row-line'>
+                                <div className='row-line2'>
+                                    <p className='title'>
+                                        <span>{item.name}</span>
+                                        <small>{item.type}</small>
+                                    </p>
+                                    <img src={item.cover} alt='project logo' />
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/RAKIZ-STUDIO' className='item '>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>RAKIZ STUDIO</span>
-                                    <small>Branding, Website</small>
-                                </p>
-                                <img src='/img/portfo2-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/JRI' className='item '>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title '>
-                                    <span>JRI</span>
-                                    <small>Website</small>
-                                </p>
-                                <img src='/img/portfo1-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/TDEX' className='item '>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>TDEX</span>
-                                    <small>Application, Website</small>
-                                </p>
-                                <img src='/img/portfo4-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/A-EYES' className='item'>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>A-EYES</span>
-                                    <small>Application</small>
-                                </p>
-                                <img src='/img/portfo6-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/QUBY' className='item'>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>QUBY</span>
-                                    <small>Application, Branding</small>
-                                </p>
-                                <img src='/img/portfo3-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/FIRE-DRILL' className='item '>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>FIRE DRILL</span>
-                                    <small>Application</small>
-                                </p>
-                                <img src='/img/portfo4-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
-                    <Link to='/project/DATIS-INTERNATIONAL' className='item '>
-                        <div className='row-line'>
-                            <div className='row-line2'>
-                                <p className='title'>
-                                    <span>DATIS INTERNATIONAL</span>
-                                    <small>Website</small>
-                                </p>
-                                <img src='/img/portfo7-min.webp' alt='project logo' />
-                            </div>
-                        </div>
-                    </Link>
+                        </Link>
+                    ))}
                 </div>
                 <p className='footer'>Danial Sharifi’s Portfolio 2025</p>
             </div>

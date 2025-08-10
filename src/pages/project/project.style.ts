@@ -13,7 +13,7 @@ export const ProjectContainer = styled.section(
         button {
             transform: rotate(90deg);
             padding: 12px;
-            width: 40px;
+            width: 42px;
             height: 40px;
             background: #ed6560;
             position: absolute;
@@ -57,6 +57,7 @@ export const ProjectContainer = styled.section(
                 width: 100%;
                 height: 800px;
                 object-fit: contain;
+                padding: 40px;
             }
         }
 
@@ -144,7 +145,7 @@ export const ProjectContainer = styled.section(
 
             .item {
                 display: grid;
-                grid-template-columns: 1fr 2fr;
+                grid-template-columns: 1.5fr 2fr;
                 gap: 40px;
                 border-right: 1px solid #363636;
                 border-left: 1px solid #363636;

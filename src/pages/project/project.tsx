@@ -40,7 +40,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
                             <ul className='info-img-list'>
                                 {project?.details.img.map(url => (
                                     <li key={url}>
-                                        <img src={`/img${url}`} />
+                                        <img src={url} />
                                     </li>
                                 ))}
                             </ul>
@@ -48,7 +48,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
                             <ul className='img-list'>
                                 {project?.pictures.map(url => (
                                     <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
-                                        <img src={`/img/${url}`} alt='Picture' />
+                                        <img src={url} alt='Picture' />
                                     </li>
                                 ))}
                             </ul>
@@ -60,7 +60,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
                             </p>
                             <div className='img-container'>
                                 {selectedImage ? (
-                                    <img className='show-img' src={`/img/${selectedImage}`} alt='Selected' />
+                                    <img className='show-img' src={selectedImage} alt='Selected' />
                                 ) : (
                                     <div className='show-img-placeholder'>Select an image</div>
                                 )}

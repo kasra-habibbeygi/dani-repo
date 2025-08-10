@@ -1,9 +1,11 @@
 /* eslint-disable indent */
+import { data } from './pages/data';
 import { Toaster } from 'react-hot-toast';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+// Components
 import Home from './pages/home';
 import Project from './pages/project';
-import { data } from './pages/data';
 
 const App = () => {
     return (
@@ -21,7 +23,7 @@ const App = () => {
             />
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<Home data={data} />} />
                     <Route path='/project/:name' element={<Project data={data} />} />
                 </Routes>
             </BrowserRouter>
