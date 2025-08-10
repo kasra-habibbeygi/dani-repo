@@ -154,29 +154,6 @@ export const data: ProjectItem[] = [
             '/img/Quby/QUBY.pic8.png'
         ]
     },
-    {
-        id: 6,
-        name: 'DATIS-INTERNATIONAL',
-        type: 'Website',
-        cover: 'img/DATIS/DATIS.cover.png',
-        description:
-            'Datis is a technology-based company that specializes in the design and manufacture of electronic components. We based our design and flow on the needs of our audience and leveraged Hicks UX law and Jakob is UX law to ensure a seamless user experience. Also analyzed the site is heat map and conducted A/B testing on the hero section to make sure we were hitting the right notes.',
-        url: 'https:google.com',
-        details: {
-            info: 'UI/UX Design, Project Management',
-            img: ['/img/DATIS/DATIS.info1.png', '/img/DATIS/DATIS.info2.png', '/img/DATIS/DATIS.info3.png']
-        },
-        pictures: [
-            '/img/DATIS/DATIS.pic1.png',
-            '/img/DATIS/DATIS.pic2.png',
-            '/img/DATIS/DATIS.pic3.png',
-            '/img/DATIS/DATIS.pic4.png',
-            '/img/DATIS/DATIS.pic5.png',
-            '/img/DATIS/DATIS.pic6.png',
-            '/img/DATIS/DATIS.pic7.png',
-            '/img/DATIS/DATIS.pic8.png'
-        ]
-    },
 
     {
         id: 8,
@@ -199,6 +176,29 @@ export const data: ProjectItem[] = [
             '/img/FireDrill/FireDrill.pic6.png',
             '/img/FireDrill/FireDrill.pic7.png',
             '/img/FireDrill/FireDrill.pic8.png'
+        ]
+    },
+    {
+        id: 6,
+        name: 'DATIS-INTERNATIONAL',
+        type: 'Website',
+        cover: 'img/DATIS/DATIS.cover.png',
+        description:
+            'Datis is a technology-based company that specializes in the design and manufacture of electronic components. We based our design and flow on the needs of our audience and leveraged Hicks UX law and Jakob is UX law to ensure a seamless user experience. Also analyzed the site is heat map and conducted A/B testing on the hero section to make sure we were hitting the right notes.',
+        url: 'https:google.com',
+        details: {
+            info: 'UI/UX Design, Project Management',
+            img: ['/img/DATIS/DATIS.info1.png', '/img/DATIS/DATIS.info2.png', '/img/DATIS/DATIS.info3.png']
+        },
+        pictures: [
+            '/img/DATIS/DATIS.pic1.png',
+            '/img/DATIS/DATIS.pic2.png',
+            '/img/DATIS/DATIS.pic3.png',
+            '/img/DATIS/DATIS.pic4.png',
+            '/img/DATIS/DATIS.pic5.png',
+            '/img/DATIS/DATIS.pic6.png',
+            '/img/DATIS/DATIS.pic7.png',
+            '/img/DATIS/DATIS.pic8.png'
         ]
     }
 ];
