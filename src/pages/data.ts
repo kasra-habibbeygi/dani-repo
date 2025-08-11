@@ -22,7 +22,7 @@ export const data: ProjectItem[] = [
         cover: '/img/BRAINFROG/BRAINFROG.cover.png',
         description:
             'Brain Frog: Capture Ideas & Implement with Habit Tracker﻿﻿Ever hear something brilliant on a podcast - an idea you know you want to implement someday, but then forget it completely? Whether it is from a conversation, a video, or something you read, Brain Frog helps you capture insights and turn them into habits that stick.',
-        url: 'https:google.com',
+        url: '',
         details: {
             info: 'UI/UX Design, Project Management',
             img: ['/img/BRAINFROG/BRAINFROG.info1.png', '/img/BRAINFROG/BRAINFROG.info2.png', '/img/BRAINFROG/BRAINFROG.info3.png']
@@ -44,7 +44,7 @@ export const data: ProjectItem[] = [
         type: 'Branding, Website',
         description:
             'Rakiz is a new brand in the accessory and clothing design line by Kimia Razzaghi, which started its activity with sustainable and ethical fashion. Due to its focus on designers and the non-industrial nature of this brand, all items are hand-stitched by designers, and all of them are selected with this choice. The goal of this brand as a sustainable brand is sustainability in all aspects affecting society and trying to continue charity-based activities.',
-        url: 'https:google.com',
+        url: 'https://rakizstudio.com',
         cover: '/img/RAKIZ/rakiz.cover.png',
         details: {
             info: 'Branding, Event Planing, UI/UX Design',
@@ -68,7 +68,7 @@ export const data: ProjectItem[] = [
         cover: 'img/JRI/JRI.cover.png',
         description:
             'JRI, will serve as a groundbreaking platform akin to Kickstarter. An innovative NFT project that promises to redefine the landscape of crowdfunding and empower creators worldwide to bring their visions to life in a decentralized and community-driven ecosystem.The "JustRead It" website was designed with a focus on simplicity and accessibility. The process began with wireframes to define the platform’s structure and ensure a seamless user experience. Usability testing and feedback helped refine the final design.',
-        url: 'https:google.com',
+        url: 'http://justreadit.xyz',
         details: {
             info: 'UI/UX Design, Project Management',
             img: ['/img/JRI/JRI.info1.png', '/img/JRI/JRI.info2.png', '/img/JRI/JRI.info3.png']
@@ -91,7 +91,7 @@ export const data: ProjectItem[] = [
         cover: '/img/TDEX/TDEX.cover.png',
         description:
             'T-DEX is redefining the decentralized trading experience by blending gamified elements with automated trading solutions, education, and a vibrant community on Telegram.The design process began with wireframes to establish a clear and intuitive structure, ensuring seamless navigation across the platform. We employed a gamified approach to make the trading experience more interactive and enjoyable, encouraging users to explore automated trading solutions and educational resources.',
-        url: 'https:google.com',
+        url: '',
         details: {
             info: 'UI/UX Design, Project Management',
             img: ['/img/TDEX/TDEX.info1.png', '/img/TDEX/TDEX.info2.png', '/img/TDEX/TDEX.info3.png']
@@ -114,7 +114,7 @@ export const data: ProjectItem[] = [
         cover: 'img/A-EYES/A-EYES.cover.png',
         description:
             'A-EYES is a revolutionary AI-assisted solution to diagnose and treat dry eye disease quickly through a phone application anytime, anywhere. The MVP version of the application has been released publicly and is currently being tested. The performance of the artificial intelligence and web app design is constantly being reviewed to ensure that the users needs can be met as easily and quickly as possible in future versions.It has also been able to diagnose 1,400 cases of dry eye with more than 95.6% accuracy.A-EYES can analyze dry-eye big data to identify patterns and trends that may not be visible to the ophthalmic world.',
-        url: 'https:google.com',
+        url: '',
         details: {
             info: 'UI/UX Design, Project Management',
             img: ['/img/A-EYES/A-EYES.info1.png', '/img/A-EYES/A-EYES.info2.png']
@@ -138,10 +138,10 @@ export const data: ProjectItem[] = [
         cover: '/img/Quby/Quby.cover.png',
         description:
             'Quby is the most available, smart, cashier-less store based on AI technology. Present a new generation of retail shops in the FMCG industry. The process used for each project phase was based on the principles of double diamond and design thinking. This method starts with defining the desired brand by choosing appropriate adjectives that describe it in three categories: "Extended Identity," "Brand Core," and "Brand Essence." Using these attributes, the visual and brand identities are developed.',
-        url: 'https:google.com',
+        url: 'https://app.quby.ir',
         details: {
             info: 'Branding, UI/UX Design',
-            img: ['/img/Quby/QUBY.info1.png', '/img/Quby/QUBY.info2.png', '/img/Quby/QUBY.info3.png']
+            img: ['/img/Quby/QUBY.info1.svg', '/img/Quby/QUBY.info2.svg', '/img/Quby/QUBY.info3.svg']
         },
         pictures: [
             '/img/Quby/QUBY.pic1.png',
@@ -162,7 +162,7 @@ export const data: ProjectItem[] = [
         cover: '/img/FireDrill/FireDrill.cover.png',
         description:
             'The FireDrill application was designed to help employees evacuate safely and efficiently during emergency situations. The project started with mapping out key user flows based on real life evacuation scenarios to make sure the app would be intuitive and easy to use under pressure.The design focused on clarity and speed, using features include zone based alerts, step by step evacuation guidance, and real time updates from safety coordinators.FireDrill is a simple, responsive, and purposeful tool that supports companies in making their emergency plans more actionable and employee-focused.',
-        url: 'https:google.com',
+        url: '',
         details: {
             info: 'UI/UX Design, Project Management',
             img: ['/img/FireDrill/FireDrill.info1.png', '/img/FireDrill/FireDrill.info2.png', '/img/FireDrill/FireDrill.info3.png']
@@ -185,7 +185,7 @@ export const data: ProjectItem[] = [
         cover: 'img/DATIS/DATIS.cover.png',
         description:
             'Datis is a technology-based company that specializes in the design and manufacture of electronic components. We based our design and flow on the needs of our audience and leveraged Hicks UX law and Jakob is UX law to ensure a seamless user experience. Also analyzed the site is heat map and conducted A/B testing on the hero section to make sure we were hitting the right notes.',
-        url: 'https:google.com',
+        url: '',
         details: {
             info: 'UI/UX Design, Project Management',
             img: ['/img/DATIS/DATIS.info1.png', '/img/DATIS/DATIS.info2.png', '/img/DATIS/DATIS.info3.png']

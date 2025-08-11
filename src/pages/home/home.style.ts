@@ -86,6 +86,9 @@ export const HomeContainer = styled.section(
                 justify-content: space-between;
                 align-items: center;
                 color: #fff;
+                .persian {
+                    font-family: JalalSly !important;
+                }
             }
         }
 
@@ -231,12 +234,47 @@ export const HomeContainer = styled.section(
                 }
             }
 
+            .thumb {
+                position: relative;
+                display: block;
+                overflow: hidden;
+
+                .overlay {
+                    position: absolute;
+                    inset: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(0, 0, 0, 0.45);
+                    color: #fff;
+                    font-weight: 600;
+                    letter-spacing: 0.06em;
+                    text-transform: uppercase;
+                    opacity: 0;
+                    transition: opacity 0.25s ease;
+                    pointer-events: none;
+                }
+            }
+
             img {
                 width: 100%;
                 height: 240px;
                 object-fit: cover;
                 border-left: 1px solid #363636;
                 border-right: 1px solid #363636;
+                transition: transform 0.35s ease;
+            }
+
+            .thumb {
+                &:hover {
+                    img {
+                        transform: scale(0.99);
+                    }
+
+                    .overlay {
+                        opacity: 1;
+                    }
+                }
             }
         }
 
@@ -313,7 +351,6 @@ export const HomeContainer = styled.section(
 
                 .label {
                     width: 100%;
-
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -345,6 +382,11 @@ export const HomeContainer = styled.section(
 
             .project-list {
                 grid-template-columns: repeat(1, 1fr);
+
+                img {
+                    border-left: none;
+                    border-right: none;
+                }
 
                 .item {
                     .row-line {
@@ -400,6 +442,11 @@ export const HomeContainer = styled.section(
                 padding: 0;
 
                 .item {
+                    &::before,
+                    &::after {
+                        display: none !important;
+                    }
+
                     .row-line {
                         &::before {
                             width: 100%;
@@ -411,15 +458,15 @@ export const HomeContainer = styled.section(
                         }
                     }
 
+                    .title {
+                        border: none;
+                    }
+
                     .row-line2 {
                         &::before {
                             width: 100%;
                             right: 0;
                         }
-                    }
-                    &::before,
-                    &::after {
-                        display: none;
                     }
                 }
             }

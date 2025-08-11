@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { FC, useState } from 'react';
 import { ProjectContainer } from './project.style';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { ProjectItem } from '../data';
 import { Arrow } from '@/assets/icons';
 import { useMediaQuery } from '@mui/material';
@@ -45,9 +45,12 @@ const Project: FC<ProjectProps> = ({ data }) => {
                         <div className='left-box'>
                             <p className='header'>INFO</p>
                             <p className='describe'>{project?.description}</p>
-                            <Link to={project?.url}>
-                                <span>Visit Website</span> <Arrow />
-                            </Link>
+                            {project?.url && (
+                                <a href={project?.url} target='_blank'>
+                                    <span>Visit Website</span> <Arrow />
+                                </a>
+                            )}
+
                             <p className='label'>Project</p>
                             <p className='info'>{project?.details.info}</p>
                             <ul className='info-img-list'>
@@ -60,7 +63,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
                             {!matches && (
                                 <>
                                     <p className='label'>Pictures</p>
-                                    <ul className='img-list'>
+                                    <ul className='img-list pic'>
                                         {project?.pictures.map(url => (
                                             <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
                                                 <img src={url} alt='Picture' />
@@ -88,7 +91,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
                                         <p className='label'>Pictures</p>
                                         <ul className='img-list'>
                                             {project?.pictures.map(url => (
-                                                <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
+                                                <li key={url} onClick={() => setSelectedImage(url)}>
                                                     <img src={url} alt='Picture' />
                                                 </li>
                                             ))}

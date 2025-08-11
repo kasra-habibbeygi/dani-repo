@@ -59,6 +59,12 @@
     font-weight: 900;
 }
 
+
+@font-face {
+    font-family: 'JalalSly';
+    src: url('../fonts/JalalSly-1.0.ttf');
+    font-weight: 500;
+}
 body,
 html {
     font-family: 'main' !important;

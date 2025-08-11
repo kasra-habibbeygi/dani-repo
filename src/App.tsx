@@ -7,6 +7,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/home';
 import Project from './pages/project';
 
+//tools
+import ScrollToTop from './tools/ScrollToTop';
+
 const App = () => {
     return (
         <>
@@ -22,6 +25,8 @@ const App = () => {
                 }}
             />
             <BrowserRouter>
+                <ScrollToTop />
+
                 <Routes>
                     <Route path='/' element={<Home data={data} />} />
                     <Route path='/project/:name' element={<Project data={data} />} />

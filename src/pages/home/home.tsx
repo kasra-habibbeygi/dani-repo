@@ -39,7 +39,7 @@ const Home: FC<HomeProps> = ({ data }) => {
                     <button>
                         <Arrow />
                     </button>
-                    <span>پروژه‌ها</span>
+                    <span className='persian'>پروژه‌ها</span>
                 </div>
             </div>
             <div className='cv-project'>
@@ -52,7 +52,10 @@ const Home: FC<HomeProps> = ({ data }) => {
                                         <span>{item.name}</span>
                                         <small>{item.type}</small>
                                     </p>
-                                    <img src={item.cover} alt='project logo' />
+                                    <div className='thumb'>
+                                        <img src={item.cover} alt='project logo' />
+                                        <span className='overlay'>See project</span>
+                                    </div>
                                 </div>
                             </div>
                         </Link>

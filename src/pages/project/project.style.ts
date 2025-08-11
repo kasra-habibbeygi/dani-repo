@@ -1,26 +1,45 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+
+const arrowOutIn = keyframes`
+  0%   { transform: translateY(0);      opacity: 1; }
+  45%  { transform: translateY(120%);  opacity: 0; }
+  50%  { transform: translateY(-120%);   opacity: 0; }
+  100% { transform: translateY(0);      opacity: 1; }
+`;
 
 export const ProjectContainer = styled.section(
     () => css`
         header {
-            height: 80px;
+            height: 60px;
             width: 100%;
-            padding: 30px 120px;
+            padding: 20px 120px;
             color: #fff;
         }
 
         button {
-            transform: rotate(90deg);
             padding: 12px;
-            width: 40px;
+            width: 42px;
             height: 40px;
-            background: #ed6560;
+            background-color: #ed6560;
             position: absolute;
+            transition: background-color 0.2s ease;
+            overflow: hidden;
+            transform: rotate(90deg);
 
             svg {
                 width: 16px;
                 height: 16px;
+                will-change: transform;
+                display: block;
+            }
+
+            &:hover {
+                background-color: #e53b35;
+
+                svg {
+                    animation: ${arrowOutIn} 0.5s ease-in-out both;
+                }
             }
         }
 
@@ -66,9 +85,10 @@ export const ProjectContainer = styled.section(
             border-left: 1px solid #363636;
 
             .describe {
-                padding: 56px 20px;
+                padding: 40px 20px;
                 font-size: 20px;
-                font-weight: 30;
+                font-weight: 300;
+                line-height: 20px;
             }
 
             a {
@@ -81,7 +101,7 @@ export const ProjectContainer = styled.section(
                 color: #fff;
                 border-radius: 50px;
                 gap: 8px;
-                margin: 0px 20px 56px;
+                margin: 0px 20px 40px;
 
                 svg {
                     transform: rotate(-90deg);
@@ -121,6 +141,8 @@ export const ProjectContainer = styled.section(
                 justify-content: space-between;
                 align-items: center;
                 height: 40px;
+                background-color: #0a0a0a;
+
                 padding: 0px 20px;
 
                 span {
@@ -138,8 +160,8 @@ export const ProjectContainer = styled.section(
 
             .label {
                 font-size: 20px;
-                font-weight: 600;
-                padding: 12px 20px;
+                font-weight: 500;
+                padding: 0px 20px 12px;
             }
 
             .item {
@@ -156,18 +178,26 @@ export const ProjectContainer = styled.section(
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
                     gap: 8px;
-                    margin: 56px 20px;
+                    margin: 0px 20px 40px;
 
                     li {
                         background-color: #0a0a0a;
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        cursor: pointer;
 
                         img {
                             width: 100%;
                             height: auto;
                             object-fit: contain;
+                            transition: transform 0.5ms ease;
+                        }
+
+                        &:hover {
+                            img {
+                                transform: scale(1.06);
+                            }
                         }
                     }
                 }
@@ -178,20 +208,19 @@ export const ProjectContainer = styled.section(
                     flex-wrap: wrap;
                     align-items: center;
                     gap: 8px;
-                    margin: 56px 20px;
+                    margin: 40px 20px;
 
                     li {
-                        width: 133px;
-                        height: 133px;
+                        width: 120px;
+                        height: 120px;
                         background-color: #0a0a0a;
                         display: flex;
 
                         justify-content: center;
                         align-items: center;
-                        padding: 34px;
 
                         img {
-                            width: 100%;
+                            width: 64px;
                             height: auto;
                             object-fit: contain;
                         }
@@ -222,8 +251,8 @@ export const ProjectContainer = styled.section(
             }
 
             header {
-                height: 64px;
-                padding: 21px 80px;
+                height: 40px;
+                padding: 10px 80px;
             }
 
             .border-line {
@@ -269,7 +298,7 @@ export const ProjectContainer = styled.section(
 
             .left-box {
                 .describe {
-                    padding: 56px 20px 40px;
+                    padding: 40px 20px 40px;
                 }
 
                 a {
@@ -287,8 +316,7 @@ export const ProjectContainer = styled.section(
             }
 
             header {
-                height: 52px;
-                padding: 14px 20px;
+                padding: 10px 20px;
             }
 
             .project-info {
