@@ -5,6 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { ProjectItem } from '../data';
 import { Arrow } from '@/assets/icons';
 import { useMediaQuery } from '@mui/material';
+import { motion } from 'framer-motion';
 
 interface ProjectProps {
     data: ProjectItem[];
@@ -35,39 +36,117 @@ const Project: FC<ProjectProps> = ({ data }) => {
     }
     return (
         <ProjectContainer>
-            <header>Danial Sharifi</header>
+            <motion.header
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    delay: 0.5
+                }}
+            >
+                Danial Sharifi
+            </motion.header>
             <div className='border-line'>
                 <div className='project-info'>
-                    <button className='back' type='button' onClick={handleBack} aria-label='Go back'>
+                    <motion.button
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{
+                            delay: 0.5
+                        }}
+                        className='back'
+                        type='button'
+                        onClick={handleBack}
+                        aria-label='Go back'
+                    >
                         <Arrow />
-                    </button>
+                    </motion.button>
                     <div className='item'>
                         <div className='left-box'>
-                            <p className='header'>INFO</p>
-                            <p className='describe'>{project?.description}</p>
+                            <motion.p
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    delay: 0.6
+                                }}
+                                className='header'
+                            >
+                                INFO
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    delay: 0.7
+                                }}
+                                className='describe'
+                            >
+                                {project?.description}
+                            </motion.p>
                             {project?.url && (
-                                <a href={project?.url} target='_blank'>
+                                <motion.a
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        delay: 0.8
+                                    }}
+                                    href={project?.url}
+                                    target='_blank'
+                                >
                                     <span>Visit Website</span> <Arrow />
-                                </a>
+                                </motion.a>
                             )}
 
-                            <p className='label'>Project</p>
-                            <p className='info'>{project?.details.info}</p>
+                            <motion.p
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    delay: 0.8
+                                }}
+                                className='label'
+                            >
+                                Project
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, x: -20 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{
+                                    delay: 0.8
+                                }}
+                                className='info'
+                            >
+                                {project?.details.info}
+                            </motion.p>
                             <ul className='info-img-list'>
-                                {project?.details.img.map(url => (
-                                    <li key={url}>
+                                {project?.details.img.map((url, index) => (
+                                    <motion.li
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{
+                                            delay: 0.8 + index / 10
+                                        }}
+                                        key={url}
+                                    >
                                         <img src={url} />
-                                    </li>
+                                    </motion.li>
                                 ))}
                             </ul>
                             {!matches && (
                                 <>
                                     <p className='label'>Pictures</p>
                                     <ul className='img-list pic'>
-                                        {project?.pictures.map(url => (
-                                            <li key={url} onClick={() => setSelectedImage(url)} style={{ cursor: 'pointer' }}>
+                                        {project?.pictures.map((url, index) => (
+                                            <motion.li
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                transition={{
+                                                    delay: 0.8 + index / 10
+                                                }}
+                                                key={url}
+                                                onClick={() => setSelectedImage(url)}
+                                                style={{ cursor: 'pointer' }}
+                                            >
                                                 <img src={url} alt='Picture' />
-                                            </li>
+                                            </motion.li>
                                         ))}
                                     </ul>
                                 </>
@@ -75,13 +154,38 @@ const Project: FC<ProjectProps> = ({ data }) => {
                         </div>
                         <div className='right-box'>
                             <p className='header'>
-                                <span>{project?.name}</span>
-                                <small>{project?.type}</small>
+                                <motion.span
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        delay: 0.8
+                                    }}
+                                >
+                                    {project?.name}
+                                </motion.span>
+                                <motion.small
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{
+                                        delay: 0.8
+                                    }}
+                                >
+                                    {project?.type}
+                                </motion.small>
                             </p>
                             <div className='main-content'>
                                 <div className='img-container'>
                                     {selectedImage ? (
-                                        <img className='show-img' src={selectedImage} alt='Selected' />
+                                        <motion.img
+                                            initial={{ opacity: 0, x: -20 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{
+                                                delay: 0.8
+                                            }}
+                                            className='show-img'
+                                            src={selectedImage}
+                                            alt='Selected'
+                                        />
                                     ) : (
                                         <div className='show-img-placeholder'>Select an image</div>
                                     )}
@@ -90,10 +194,18 @@ const Project: FC<ProjectProps> = ({ data }) => {
                                     <div className='choose-img'>
                                         <p className='label'>Pictures</p>
                                         <ul className='img-list'>
-                                            {project?.pictures.map(url => (
-                                                <li key={url} onClick={() => setSelectedImage(url)}>
+                                            {project?.pictures.map((url, index) => (
+                                                <motion.li
+                                                    initial={{ opacity: 0, x: -20 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    transition={{
+                                                        delay: 0.8 + index / 10
+                                                    }}
+                                                    key={url}
+                                                    onClick={() => setSelectedImage(url)}
+                                                >
                                                     <img src={url} alt='Picture' />
-                                                </li>
+                                                </motion.li>
                                             ))}
                                         </ul>
                                     </div>
