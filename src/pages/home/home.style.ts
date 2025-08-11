@@ -57,6 +57,12 @@ export const HomeContainer = styled.section(
                     color: #fff;
                     border-radius: 50px;
                     margin-top: 32px;
+                    gap: 8px;
+
+                    svg {
+                        width: 16px;
+                        transform: rotate(-90deg);
+                    }
                 }
             }
         }
@@ -86,7 +92,8 @@ export const HomeContainer = styled.section(
         .cv-project {
             min-height: 100vh;
             margin-top: 70px;
-            border: 1px solid #363636;
+            border-top: 1px solid #363636;
+            border-bottom: 1px solid #363636;
             width: 100%;
             border-bottom: none;
             border-top: none;

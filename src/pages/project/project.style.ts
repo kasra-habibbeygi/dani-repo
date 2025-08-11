@@ -32,7 +32,7 @@ export const ProjectContainer = styled.section(
             height: 440px;
             border-left: 1px solid #363636;
             border-right: 1px solid #363636;
-            margin: 0px 81px;
+            margin: 0px 80px;
             padding-bottom: 72px;
             display: flex;
             align-items: flex-end;
@@ -99,7 +99,8 @@ export const ProjectContainer = styled.section(
 
         .border-line {
             padding: 0px 80px;
-            border: 1px solid #363636;
+            border-top: 1px solid #363636;
+            border-bottom: 1px solid #363636;
             position: relative;
 
             &::before {

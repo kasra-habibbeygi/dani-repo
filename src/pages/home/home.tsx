@@ -26,7 +26,10 @@ const Home: FC<HomeProps> = ({ data }) => {
                         I’m Danial Sharifi, born in 1999 , Designer and Product Manager live in <span>Tehran</span>
                         <b>Barcelona</b>
                     </p>
-                    <Link to=''>Watch CV</Link>
+                    <Link to=''>
+                        Watch CV
+                        <Arrow />
+                    </Link>
                 </div>
             </header>
             <div className='header-img'>
