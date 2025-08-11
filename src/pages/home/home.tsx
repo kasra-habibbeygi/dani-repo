@@ -17,10 +17,10 @@ const Home: FC<HomeProps> = ({ data }) => {
     return (
         <HomeContainer>
             <header>
-                <div className='left-side'>
+                <a className='left-side' href='mailto:sharifidanny@gmail.com'>
                     <p>CONTACT ME</p>
                     <p>SHARIFIDANNY@GMAIL.COM</p>
-                </div>
+                </a>
                 <div className='right-side'>
                     <p>
                         I’m Danial Sharifi, born in 1999 , Designer and Product Manager live in <span>Tehran</span>
