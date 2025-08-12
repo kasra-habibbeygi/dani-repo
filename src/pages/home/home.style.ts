@@ -4,6 +4,29 @@ import styled from '@emotion/styled';
 export const HomeContainer = styled.section(
     () => css`
         padding-top: 104px;
+        @property --c2 {
+            syntax: '<color>';
+            inherits: false;
+            initial-value: #002417;
+        }
+
+        @keyframes c2Cycle {
+            0% {
+                --c2: #002417;
+            }
+            25% {
+                --c2: #4a3b00;
+            }
+            50% {
+                --c2: #3a0a0a;
+            }
+            75% {
+                --c2: #001b2e;
+            }
+            100% {
+                --c2: #002417;
+            }
+        }
 
         .header-layer {
             position: absolute;
@@ -12,8 +35,12 @@ export const HomeContainer = styled.section(
             width: 100%;
             height: 100vh;
             display: block;
-            background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, #002417 70%, #111111 100%);
             z-index: 1;
+            --c2: #002417;
+
+            background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, var(--c2) 70%, #111111 100%);
+
+            animation: c2Cycle 22s ease-in-out infinite;
         }
 
         .noise {
