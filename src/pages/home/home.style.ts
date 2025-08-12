@@ -5,7 +5,48 @@ export const HomeContainer = styled.section(
     () => css`
         padding-top: 104px;
 
+        .header-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: block;
+            background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, #002417 70%, #111111 100%);
+            z-index: 1;
+        }
+
+        .noise {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 1;
+            opacity: 0.2;
+        }
+
+        .shadow-1 {
+            position: absolute;
+            top: 0;
+            width: 500px;
+            height: auto;
+            z-index: 2;
+            left: 400px;
+        }
+
+        .shadow-2 {
+            position: absolute;
+            top: -200px;
+            right: -184px;
+            z-index: 2;
+            width: 500px;
+            height: auto;
+        }
+
         header {
+            position: relative;
+            z-index: 2;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
@@ -73,6 +114,8 @@ export const HomeContainer = styled.section(
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            z-index: 2;
 
             img {
                 width: 835px;

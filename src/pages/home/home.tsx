@@ -5,7 +5,7 @@ import { ProjectItem } from '../data';
 import { motion } from 'framer-motion';
 
 // Assets
-import { Arrow } from '@/assets/icons';
+import { Arrow, BlackShadow, WhiteShadow } from '@/assets/icons';
 import { HomeContainer } from './home.style';
 
 //Types
@@ -17,6 +17,10 @@ const Home: FC<HomeProps> = ({ data }) => {
 
     return (
         <HomeContainer>
+            <div className='header-layer'></div>
+            {/* <img src='/img/noise.webp' className='noise' alt='' /> */}
+            <WhiteShadow className='shadow-2' />
+            <BlackShadow className='shadow-1' />
             <header>
                 <motion.a
                     initial={{ opacity: 0, x: -20 }}
