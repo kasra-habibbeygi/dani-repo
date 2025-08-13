@@ -49,7 +49,7 @@ export const data: ProjectItem[] = [
         cover: '/img/BRAINFROG/BRAINFROG.cover.png',
         description:
             'Brain Frog: Capture Ideas & Implement with Habit Tracker﻿﻿Ever hear something brilliant on a podcast - an idea you know you want to implement someday, but then forget it completely? Whether it is from a conversation, a video, or something you read, Brain Frog helps you capture insights and turn them into habits that stick.',
-        url: '',
+        url: 'https://apps.apple.com/us/app/habit-idea-tracker-brainfrog/id6747943281',
         details: {
             info: 'UI/UX Design, Project Management',
             img: [BrainfrogLogo, BrainfrogFont, BrainfrogPages]

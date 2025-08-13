@@ -13,7 +13,7 @@ export const HomeContainer = styled.section(
 
         @keyframes c2Cycle {
             0% {
-                --c2: #002417;
+                --c2: #2f213b;
             }
             25% {
                 --c2: #4a3b00;
@@ -25,13 +25,13 @@ export const HomeContainer = styled.section(
                 --c2: #001b2e;
             }
             100% {
-                --c2: #002417;
+                --c2: #2f213b;
             }
         }
 
         .a {
             position: absolute;
-            height: 100vh;
+            height: 600px;
             top: -130px;
             top: 0;
             left: 0;
@@ -41,7 +41,7 @@ export const HomeContainer = styled.section(
 
         .svg {
             width: 100%;
-            height: 100vh;
+            height: 600px;
             top: 0;
             left: 0;
             z-index: 2;
@@ -51,7 +51,7 @@ export const HomeContainer = styled.section(
 
         .void-layer {
             width: 100%;
-            height: 100vh;
+            height: 600px;
             top: 0;
             left: 0;
             z-index: 3;
@@ -64,19 +64,20 @@ export const HomeContainer = styled.section(
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 600px;
             display: block;
             z-index: 1;
             --c2: #002417;
             background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, var(--c2) 70%, #11111100 100%);
-            animation: c2Cycle 22s ease-in-out infinite;
+            will-change: background;
+            animation: c2Cycle 15s ease-in-out infinite;
         }
 
         .noise {
             position: absolute;
             top: 0;
             width: 100%;
-            height: 100vh;
+            height: 600px;
             object-fit: cover;
             z-index: 1;
             opacity: 0.2;
