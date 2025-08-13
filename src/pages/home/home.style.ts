@@ -506,24 +506,6 @@ export const HomeContainer = styled.section(
         @media (max-width: 680px) {
             padding-top: 48px;
 
-            @keyframes c2Cycle {
-                0% {
-                    --c2: #002417;
-                }
-                25% {
-                    --c2: #4a3b00;
-                }
-                50% {
-                    --c2: #3a0a0a;
-                }
-                75% {
-                    --c2: #001b2e;
-                }
-                100% {
-                    --c2: #002417;
-                }
-            }
-
             .project-list {
                 grid-template-columns: repeat(1, 1fr);
 
