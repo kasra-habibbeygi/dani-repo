@@ -88,7 +88,14 @@ const Project: FC<ProjectProps> = ({ data }) => {
                                     href={project?.url}
                                     target='_blank'
                                 >
-                                    <span>{project.name === 'QUBY' ? 'See Application' : 'Visit Website'}</span> <Arrow />
+                                    <span>
+                                        {project.name === 'QUBY'
+                                            ? 'See Application'
+                                            : project.name === 'BRAINFROG'
+                                                ? 'See MVP version'
+                                                : 'Visit Website'}
+                                    </span>{' '}
+                                    <Arrow />
                                 </motion.a>
                             )}
 

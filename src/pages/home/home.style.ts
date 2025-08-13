@@ -11,9 +11,9 @@ export const HomeContainer = styled.section(
             initial-value: #002417;
         }
 
-        @keyframes c2Cycle {
+        /* @keyframes c2Cycle {
             0% {
-                --c2: #2f213b;
+                --c2: #002417;
             }
             25% {
                 --c2: #4a3b00;
@@ -25,7 +25,22 @@ export const HomeContainer = styled.section(
                 --c2: #001b2e;
             }
             100% {
+                --c2: #002417;
+            }
+        } */
+
+        @keyframes c2Cycle {
+            0% {
+                --c2: #002417;
+            }
+            25% {
                 --c2: #2f213b;
+            }
+            75% {
+                --c2: #2f213b;
+            }
+            100% {
+                --c2: #002417;
             }
         }
 
@@ -70,7 +85,7 @@ export const HomeContainer = styled.section(
             --c2: #002417;
             background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, var(--c2) 70%, #11111100 100%);
             will-change: background;
-            animation: c2Cycle 15s ease-in-out infinite;
+            animation: c2Cycle 10s ease-in-out infinite;
         }
 
         .noise {
@@ -490,6 +505,24 @@ export const HomeContainer = styled.section(
 
         @media (max-width: 680px) {
             padding-top: 48px;
+
+            @keyframes c2Cycle {
+                0% {
+                    --c2: #002417;
+                }
+                25% {
+                    --c2: #4a3b00;
+                }
+                50% {
+                    --c2: #3a0a0a;
+                }
+                75% {
+                    --c2: #001b2e;
+                }
+                100% {
+                    --c2: #002417;
+                }
+            }
 
             .project-list {
                 grid-template-columns: repeat(1, 1fr);
