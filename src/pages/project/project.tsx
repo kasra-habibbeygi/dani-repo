@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FC, useState } from 'react';
+import { createElement, FC, useState } from 'react';
 import { ProjectContainer } from './project.style';
 import { useNavigate, useParams } from 'react-router-dom';
 import { ProjectItem } from '../data';
@@ -20,11 +20,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
     const [selectedImage, setSelectedImage] = useState<string | null>(project?.pictures?.[0] || null);
 
     const handleBack = () => {
-        if ((window.history.state as any)?.idx > 0) {
-            navigate(-1);
-        } else {
-            navigate('/');
-        }
+        navigate('/');
     };
 
     if (!project) {
@@ -126,7 +122,7 @@ const Project: FC<ProjectProps> = ({ data }) => {
                                         }}
                                         key={url}
                                     >
-                                        <img src={url} />
+                                        {createElement(url)}
                                     </motion.li>
                                 ))}
                             </ul>

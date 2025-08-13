@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 export const HomeContainer = styled.section(
     () => css`
         padding-top: 104px;
+
         @property --c2 {
             syntax: '<color>';
             inherits: false;
@@ -28,6 +29,36 @@ export const HomeContainer = styled.section(
             }
         }
 
+        .a {
+            position: absolute;
+            height: 100vh;
+            top: -130px;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 0;
+        }
+
+        .svg {
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            position: absolute;
+            opacity: 0.2;
+        }
+
+        .void-layer {
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            position: absolute;
+            background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0) 100%);
+        }
+
         .header-layer {
             position: absolute;
             top: 0;
@@ -37,9 +68,7 @@ export const HomeContainer = styled.section(
             display: block;
             z-index: 1;
             --c2: #002417;
-
-            background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, var(--c2) 70%, #111111 100%);
-
+            background: radial-gradient(224.3% 157.68% at 159.87% -57.68%, #f8f8f8 0%, var(--c2) 70%, #11111100 100%);
             animation: c2Cycle 22s ease-in-out infinite;
         }
 
@@ -73,7 +102,7 @@ export const HomeContainer = styled.section(
 
         header {
             position: relative;
-            z-index: 2;
+            z-index: 100;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
@@ -86,6 +115,11 @@ export const HomeContainer = styled.section(
                 color: #ed6560;
                 font-weight: 300;
                 font-size: 16px;
+                transition: all linear 0.2s;
+
+                &:hover {
+                    color: #fff;
+                }
 
                 p {
                     line-height: 14px;
@@ -126,6 +160,12 @@ export const HomeContainer = styled.section(
                     border-radius: 50px;
                     margin-top: 32px;
                     gap: 8px;
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: translateY(-4px) translateX(-2px) !important;
+                        box-shadow: 2px 5px 0 0 black;
+                    }
 
                     svg {
                         width: 16px;

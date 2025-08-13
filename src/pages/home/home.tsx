@@ -17,10 +17,19 @@ const Home: FC<HomeProps> = ({ data }) => {
 
     return (
         <HomeContainer>
-            <div className='header-layer'></div>
-            {/* <img src='/img/noise.webp' className='noise' alt='' /> */}
-            <WhiteShadow className='shadow-2' />
-            <BlackShadow className='shadow-1' />
+            <div className='a' style={{ overflowX: 'hidden' }}>
+                <div className='header-layer'></div>
+                <div className='void-layer'></div>
+                <WhiteShadow className='shadow-2' />
+                <BlackShadow className='shadow-1' />
+                <svg className='svg' xmlns='http://www.w3.org/2000/svg'>
+                    <filter id='noiseFilter'>
+                        <feTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch' />
+                    </filter>
+
+                    <rect width='100%' height='100%' filter='url(#noiseFilter)' />
+                </svg>
+            </div>
             <header>
                 <motion.a
                     initial={{ opacity: 0, x: -20 }}

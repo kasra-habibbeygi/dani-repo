@@ -1,4 +1,31 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable max-len */
+
+import {
+    AeyesFont,
+    AeyesPages,
+    BrainfrogFont,
+    BrainfrogLogo,
+    BrainfrogPages,
+    DatisFont,
+    DatisLogo,
+    DatisPages,
+    FiredrillFont,
+    FiredrillIcon,
+    FiredrillPages,
+    JriFont,
+    JriLogo,
+    JriPages,
+    QubyFont,
+    QubyLogo,
+    QubyPages,
+    RakizFont,
+    RakizLogo,
+    RakizPage,
+    TdexFont,
+    TdexLogo,
+    TdexPages
+} from '@/assets/icons';
 
 export type ProjectItem = {
     id: number;
@@ -9,7 +36,7 @@ export type ProjectItem = {
     cover: string;
     details: {
         info: string;
-        img: string[];
+        img: any[];
     };
     pictures: string[];
 };
@@ -25,17 +52,17 @@ export const data: ProjectItem[] = [
         url: '',
         details: {
             info: 'UI/UX Design, Project Management',
-            img: ['/img/BRAINFROG/BRAINFROG.info1.png', '/img/BRAINFROG/BRAINFROG.info2.png', '/img/BRAINFROG/BRAINFROG.info3.png']
+            img: [BrainfrogLogo, BrainfrogFont, BrainfrogPages]
         },
         pictures: [
-            '/img/BRAINFROG/BRAINFROG.pic1.png',
-            '/img/BRAINFROG/BRAINFROG.pic2.png',
-            '/img/BRAINFROG/BRAINFROG.pic3.png',
-            '/img/BRAINFROG/BRAINFROG.pic4.png',
-            '/img/BRAINFROG/BRAINFROG.pic5.png',
-            '/img/BRAINFROG/BRAINFROG.pic6.png',
-            '/img/BRAINFROG/BRAINFROG.pic7.png',
-            '/img/BRAINFROG/BRAINFROG.pic8.png'
+            '/img/BRAINFROG/BRAINFROG.pic1.webp',
+            '/img/BRAINFROG/BRAINFROG.pic2.webp',
+            '/img/BRAINFROG/BRAINFROG.pic3.webp',
+            '/img/BRAINFROG/BRAINFROG.pic4.webp',
+            '/img/BRAINFROG/BRAINFROG.pic5.webp',
+            '/img/BRAINFROG/BRAINFROG.pic6.webp',
+            '/img/BRAINFROG/BRAINFROG.pic7.webp',
+            '/img/BRAINFROG/BRAINFROG.pic8.webp'
         ]
     },
     {
@@ -48,17 +75,17 @@ export const data: ProjectItem[] = [
         cover: '/img/RAKIZ/rakiz.cover.png',
         details: {
             info: 'Branding, Event Planing, UI/UX Design',
-            img: ['/img/RAKIZ/RAKIZ-STUDIO-info1.png', '/img/RAKIZ/RAKIZ-STUDIO-info2.png', '/img/RAKIZ/RAKIZ-STUDIO-info3.png']
+            img: [RakizLogo, RakizFont, RakizPage]
         },
         pictures: [
-            '/img/RAKIZ/RAKIZ-STUDIO-pic1.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic2.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic3.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic4.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic5.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic6.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic7.png',
-            '/img/RAKIZ/RAKIZ-STUDIO-pic8.png'
+            '/img/RAKIZ/RAKIZ-STUDIO-pic1.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic2.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic3.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic4.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic5.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic6.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic7.webp',
+            '/img/RAKIZ/RAKIZ-STUDIO-pic8.webp'
         ]
     },
     {
@@ -71,7 +98,7 @@ export const data: ProjectItem[] = [
         url: 'http://justreadit.xyz',
         details: {
             info: 'UI/UX Design, Project Management',
-            img: ['/img/JRI/JRI.info1.png', '/img/JRI/JRI.info2.png', '/img/JRI/JRI.info3.png']
+            img: [JriLogo, JriFont, JriPages]
         },
         pictures: [
             '/img/JRI/JRI.pic1.png',
@@ -94,7 +121,7 @@ export const data: ProjectItem[] = [
         url: '',
         details: {
             info: 'UI/UX Design, Project Management',
-            img: ['/img/TDEX/TDEX.info1.png', '/img/TDEX/TDEX.info2.png', '/img/TDEX/TDEX.info3.png']
+            img: [TdexLogo, TdexFont, TdexPages]
         },
         pictures: [
             '/img/TDEX/TDEX.pic1.png',
@@ -117,7 +144,7 @@ export const data: ProjectItem[] = [
         url: '',
         details: {
             info: 'UI/UX Design, Project Management',
-            img: ['/img/A-EYES/A-EYES.info1.png', '/img/A-EYES/A-EYES.info2.png']
+            img: [AeyesFont, AeyesPages]
         },
         pictures: [
             '/img/A-EYES/A-EYES.pic1.png',
@@ -141,7 +168,7 @@ export const data: ProjectItem[] = [
         url: 'https://app.quby.ir',
         details: {
             info: 'Branding, UI/UX Design',
-            img: ['/img/Quby/QUBY.info1.svg', '/img/Quby/QUBY.info2.svg', '/img/Quby/QUBY.info3.svg']
+            img: [QubyLogo, QubyFont, QubyPages]
         },
         pictures: [
             '/img/Quby/QUBY.pic1.png',
@@ -165,7 +192,7 @@ export const data: ProjectItem[] = [
         url: '',
         details: {
             info: 'UI/UX Design, Project Management',
-            img: ['/img/FireDrill/FireDrill.info1.png', '/img/FireDrill/FireDrill.info2.png', '/img/FireDrill/FireDrill.info3.png']
+            img: [FiredrillIcon, FiredrillFont, FiredrillPages]
         },
         pictures: [
             '/img/FireDrill/FireDrill.pic1.png',
@@ -188,7 +215,7 @@ export const data: ProjectItem[] = [
         url: '',
         details: {
             info: 'UI/UX Design, Project Management',
-            img: ['/img/DATIS/DATIS.info1.png', '/img/DATIS/DATIS.info2.png', '/img/DATIS/DATIS.info3.png']
+            img: [DatisLogo, DatisFont, DatisPages]
         },
         pictures: [
             '/img/DATIS/DATIS.pic1.png',

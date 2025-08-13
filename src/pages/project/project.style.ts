@@ -186,6 +186,7 @@ export const ProjectContainer = styled.section(
                         justify-content: center;
                         align-items: center;
                         cursor: pointer;
+                        padding: 12px;
 
                         img {
                             width: 100%;
@@ -292,7 +293,10 @@ export const ProjectContainer = styled.section(
                 }
 
                 .show-img {
-                    padding: 0px 0px 40px;
+                    padding: 16px 0px 40px;
+                    min-height: 400px;
+                    max-height: 400px;
+                    height: 400px;
                 }
             }
 
