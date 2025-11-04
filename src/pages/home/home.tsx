@@ -77,10 +77,11 @@ const Home: FC<HomeProps> = ({ data }) => {
                         transition={{
                             delay: 1.2
                         }}
-                        href='https://drive.google.com/file/d/1acGoNIlYFWxjMjrINcKpKUZJ-4COw3rB/view?usp=sharing'
+                        // href='https://drive.google.com/file/d/1acGoNIlYFWxjMjrINcKpKUZJ-4COw3rB/view?usp=sharing'
+                        href='mailto:sharifidanny@gmail.com'
                         target='_blank'
                     >
-                        Watch CV
+                        CONTACT ME
                         <Arrow />
                     </motion.a>
                 </div>
